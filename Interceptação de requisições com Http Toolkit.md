@@ -1,63 +1,63 @@
 ## Interceptação de Requisições em Aplicativos Flutter para Windows e Android com HttpToolkit
 
-Este guia é destinado a projetos Flutter que rodem no Windows e Android. Utilizamos o [HttpToolkit](https://httptoolkit.com/), uma ferramenta que permite visualizar e inspecionar as requisições HTTP/HTTPS feitas pelo aplicativo.
+Este guia é destinado a projetos Flutter que rodem no Windows e Android. Utilizamos o [HTTP Toolkit](https://httptoolkit.com/), uma ferramenta que permite visualizar e inspecionar as requisições HTTP/HTTPS feitas pelo aplicativo.
 
 ---
 
 ### ✅ Pré-requisitos
 
-1. Instalar o [HttpToolkit](https://httptoolkit.com/) no seu computador.
+1. Instalar o [HTTP Toolkit](https://httptoolkit.com/) no seu computador.
 2. Certificar-se de que o aplicativo Flutter esteja preparado para interceptar requisições usando `HttpOverrides`.
 
 ---
 
 ### 📱 Interceptando requisições no Android
 
-1. Instale o app **HttpToolkit para Android** via Play Store.
+1. Instale o app **HTTP Toolkit para Android** via Play Store.
 2. Conecte o dispositivo Android ao computador e ative a **Depuração USB** nas opções de desenvolvedor.
 
-   ![Image](https://github.com/user-attachments/assets/a54580a8-c2e8-4526-ab78-beea802447da)
+   ![Image](https://i.ibb.co/355cTFBn/image.png)
 
-3. No HttpToolkit (Windows):
+3. No HTTP Toolkit (Windows):
    - Clique em **Intercept** no menu lateral.
    - Selecione **Android device via ADB**.
 
-   ![Image](https://github.com/user-attachments/assets/5eb3491f-ca77-433b-83f7-00af90cc124d)
+   ![Image](https://i.ibb.co/zHQt2zmf/image.png)
 
 4. Abra o app HttpToolkit no Android e siga as instruções para instalar o certificado de segurança.
 
 | |  |
 | --- | --- |
-|![Image](https://github.com/user-attachments/assets/8d6bb145-eaff-47c5-ae98-80a69c4e504e)| ![Image](https://github.com/user-attachments/assets/1fe0d249-57a3-4713-9e7a-8d32222e1c2e)|
-![Image](https://github.com/user-attachments/assets/a9bba113-7aa4-435f-a59f-a3031cd7b0df)|![Image](https://github.com/user-attachments/assets/db18461b-9b11-4e6d-9799-fd9fda87b766)|
+| ![Image](https://i.ibb.co/XZVy32Qr/image.png) | ![Image](https://i.ibb.co/yB58jYwH/image.png) |
+|![Image](https://i.ibb.co/pBL3fnBm/image.png)  | ![Image](https://i.ibb.co/8LPj9X1q/image.png) |
 
-5. Execute seu aplicativo Android e realize as requisições que deseja interceptar; elas aparecerão em tempo real no painel do HttpToolkit no menu **View**.
+5. Execute seu aplicativo Android e realize as requisições que deseja interceptar; elas aparecerão em tempo real no painel do HTTP Toolkit no menu **View**.
 
-  ![Image](https://github.com/user-attachments/assets/e71b662a-0551-4b19-840c-9fc7e84ad948)
+  ![Image](https://i.ibb.co/WvRcBkg9/image.png)
 
 ---
 
 ### 💻 Interceptando requisições no Windows
 
-1. Abra o HttpToolkit no Windows.
+1. Abra o HTTP Toolkit no Windows.
 2. Execute seu aplicativo Flutter no Windows normalmente.
-3. No HttpToolkit, clique em **Intercept** e selecione **Anything**.
+3. No HTTP Toolkit, clique em **Intercept** e selecione **Anything**.
 
-   ![Image](https://github.com/user-attachments/assets/f8977b61-ead5-44e7-84e7-da4c8b977c79)
+   ![Image](https://i.ibb.co/8pXgDXG/image.png)
 
 
 4. Na seção **Step 2: Trust the certificate authority**:
    - Clique em **Export CA certificate**.
    - Instale o certificado gerado no seu sistema.
 
-   ![Image](https://github.com/user-attachments/assets/57d5a0c1-4509-454f-8107-54818359ed5b)
-   ![Image](https://github.com/user-attachments/assets/a057e76b-445e-4160-b096-d4f22ebce0ec)
+   ![Image](https://i.ibb.co/d0JCdCtQ/image.png)
+   ![Image](https://i.ibb.co/Tqhh3rB6/image.png)
 
 
    > ⚡ *Observação:*  
-   > A exportação e instalação do certificado é necessária para interceptar tráfego HTTPS corretamente. O HttpToolkit cria uma Autoridade Certificadora (CA) local e utiliza certificados dessa CA para descriptografar conexões HTTPS interceptadas.
+   > A exportação e instalação do certificado é necessária para interceptar tráfego HTTPS corretamente. O HTTP Toolkit cria uma Autoridade Certificadora (CA) local e utiliza certificados dessa CA para descriptografar conexões HTTPS interceptadas.
 
-5. Realize as requisições que deseja monitorar; elas aparecerão em tempo real no painel do HttpToolkit no menu **View**.
+5. Realize as requisições que deseja monitorar; elas aparecerão em tempo real no painel do HTTP Toolkit no menu **View**.
 
 ---
 
@@ -116,4 +116,3 @@ Future<void> main() async {
 ## Conclusão
 
 Com essa configuração, você consegue visualizar, monitorar e depurar todas as requisições feitas pelo seu app Flutter no Windows e Android de forma rápida e eficiente, inclusive tráfego HTTPS.
-
